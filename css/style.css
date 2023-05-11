@@ -1,35 +1,31 @@
 @font-face {
     font-family: "HelveticaNeueLTProLt";
-    src: url("../fonts/HelveticaNeueLTProLt.otf") format("otf");
-}
-
-p {
-    font-family: "HelveticaNeueLTProLt", Arial, sans-serif;
+    src: url("../fonts/HelveticaNeueLTProLt.otf") format("opentype");
 }
 
 @font-face {
     font-family: "HelveticaNeueLTPro Roman";
-    src: url(…/fonts/HelveticaNeueLTProRoman.otf) format("otf");
+    src: url(…/fonts/HelveticaNeueLTProRoman.otf) format("opentype");
 }
 
 @font-face {
     font-family: "Merriweather-LightItalic";
-    src: url(…/fonts/Merriweather-LightItalic.ttf) format("ttf");
+    src: url(…/fonts/Merriweather-LightItalic.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Montserrat-Light";
-    src: url(…/fonts/Montserrat-Light.ttf) format("ttf");
+    src: url(…/fonts/Montserrat-Light.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Montserrat-Regular";
-    src: url(…/fonts/Montserrat-Regular.ttf) format("ttf");
+    src: url(…/fonts/Montserrat-Regular.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Roboto-Regular";
-    src: url(…/fonts/Roboto-Regular.ttf) format("ttf");
+    src: url(…/fonts/Roboto-Regular.ttf) format("truetype");
 }
 
 /*
@@ -142,3 +138,57 @@ body {
     align-items: center;
     margin: 0 auto 206px;
 }
+
+.about {
+    height: 1129px;
+    padding-top: 128px;
+    padding-bottom: 271px;
+    background: url(../img/buildings__dark.png) center bottom repeat-x,
+        url(../img/buildings__white.png) center bottom repeat-x,
+        #1d1d1d;
+    /* background-size: contain; */
+}
+
+.container {}
+
+.about__inner {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    /*для того чтобы были 2 столбцов и строк и занимали макс размер*/
+    grid-template-columns: max-content max-content;
+    grid-gap: 178px;
+    /*расстояние между ячейками сверху и снизу*/
+
+}
+
+.about__item {
+    width: 417px;
+    height: 276px;
+    background-color: #181818;
+    text-align: center;/*чтобывыровнить текст по центру*/
+    display: flex;
+    flex-direction: column;    /*чтобы 2 элемента шли друг под другом, но за счет флексов мы выравнием их по горизонтали и вертикали*/
+    justify-content: center;
+    align-items: center;
+}
+
+.about__year {
+    font-family: "HelveticaNeueLTPro Lt", sans-serif;
+    font-size: 48px;
+    /*line-height: 26px;*/
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #fefefe;
+    margin-bottom: 27px;
+}
+
+.about__text {
+    font-family: "Montserrat-Light", sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: #b7b7b7;
+}
+
+(.about__item>.about__year+p)*2
