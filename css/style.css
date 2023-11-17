@@ -88,6 +88,10 @@ body {
     margin-right: 0;
 }
 
+.menu__mobile {
+    display: none;
+}
+
 .active a {
     color: #010101;
 }
@@ -145,8 +149,8 @@ body {
     height: 1129px;
     padding-top: 128px;
     padding-bottom: 271px;
-    background: url(../img/buildings__dark.png) center 101% repeat-x,
-        url(../img/buildings__white.png) center 101% repeat-x,
+    background: url(../img/buildings__white.png) center 100% repeat-x,
+        url(../img/buildings__dark.png) center 100% repeat-x,
         #1d1d1d;
     /* background-size: contain; */
 }
@@ -421,7 +425,8 @@ body {
 .contact__number {
     margin-bottom: 18px;
 }
-    /*убирает у импута справа стрелочки выбора*/
+
+/*убирает у импута справа стрелочки выбора*/
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -472,4 +477,123 @@ input[type='number'] {
     font-weight: 400;
     letter-spacing: 0.02em;
     color: #3b3b3b;
+}
+
+/*media for iPad*/
+@media screen and (max-width: 769px) {
+    .container {
+        width: 768px;
+    }
+
+    .about {
+        height: auto;
+    }
+
+    .about {
+        height: auto;
+        padding-bottom: 200px;
+        background-position: center 102%, center 102%;
+    }
+
+    .about__inner {
+        grid-gap: 10px;
+        grid-template-columns: max-content;
+        /*картинки в одну колонку.1.7 Делаем адаптивный дизайн для сайта
+        */
+    }
+
+    .provide {
+        padding-bottom: 100px;
+    }
+
+    .team .block__title,
+    .provide .block__title {
+        padding-top: 100px;
+    }
+
+    .provide__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .provide__item {
+        max-width: 300px;
+        margin: 0 30px 40px;
+    }
+
+    .contact__form {
+        padding-top: 100px;
+    }
+
+    .footer {
+        padding-top: 30px;
+    }
+}
+
+/*media for iPhoneX*/
+@media screen and (max-width: 376px) {
+    .container {
+        width: 375px;
+    }
+    .logo{
+        margin: 0 -15px;
+    }
+    .menu__desktop {
+        display: none;
+    }
+  .menu__mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu {
+        display: none;
+    }
+    .menu__burger{
+        cursor: pointer;
+        width: 30px;
+        height: 3px;
+        background-color: black;   
+        position: relative;
+    }
+    .menu__burger::after{
+        content: '';/*чтобы псевдокласс работал*/
+        width: 30px;
+        height: 3px;
+        background-color: black;  
+        position: absolute; 
+        bottom: -10px;
+     }
+     .menu__burger::before{
+        content: '';/*чтобы псевдокласс работал*/
+        width: 30px;
+        height: 3px;
+        background-color: black;  
+        position: absolute; 
+        top: -10px;
+     }
+     .header__title {
+        padding-top: 100px;
+        margin-bottom: 30px;
+    }
+    .header__button{
+        margin-bottom: 100px;
+    }
+    .about__item {
+        width: 375px;
+    }
+    .team{
+        height: auto;
+        padding-bottom: 80px;
+    }
+    .team__inner{
+          padding-top: 100px;
+          flex-wrap: wrap;
+    }
+    .team__item{
+        width: 340px
+    }
+    .provide__inner{
+        padding-top: 100px;
+    }
 }
